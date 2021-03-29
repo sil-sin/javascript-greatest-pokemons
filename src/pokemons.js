@@ -67,8 +67,19 @@ let getGroundPokeImg = (pokedex) => {
 
 
 // Iteration 5: Find all pokemon names heavier than Pikachu
+function getHeavyPokemons(pokedex){
+  let heaviers =[]
+  if(pokedex.length == 0){
+    return 0
+  } 
+  let pikaWeight=0;
 
-console.log(getHeavyPokemons(pokemons))
+  if (pokedex.name == "Pikachu"){
+       pikaWeight = +(pokedex.weight.slice(0,-2))
+  }
+  return heaviers
+}
+// console.log(getHeavyPokemons(pokemons))
 // Iteration 6: Alphabetic Order - Order by name and print the first 20 names
 
 let cloneArr = JSON.parse(JSON.stringify(pokemons));
